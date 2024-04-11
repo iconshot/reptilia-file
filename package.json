@@ -1,0 +1,16 @@
+{
+  "name": "@reptilia/file",
+  "version": "1.0.0",
+  "description": "Reptilia File",
+  "homepage": "https://reptilia.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iconshot/reptilia-file.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "reptilia",
+    "file"
+  ],
+  "license": "MIT"
+}
