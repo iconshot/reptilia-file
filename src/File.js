@@ -30,15 +30,21 @@ class File {
     return this.buffer.length;
   }
 
-  async write(file) {
+  async ensureDir(file) {
     const dir = path.dirname(file);
 
     await fsp.mkdir(dir, { recursive: true });
+  }
+
+  async write(file) {
+    await this.ensureDir(file);
 
     await fsp.writeFile(file, this.buffer);
   }
 
   async append(file) {
+    await this.ensureDir(file);
+
     await fsp.appendFile(file, this.buffer);
   }
 }
